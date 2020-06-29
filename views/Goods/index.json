@@ -1,0 +1,163 @@
+{
+  "apiName":"basic",
+  "editDialogTitle": "产品资料设置",
+  "width": "780px",
+  "labelWidth": "100px",
+    "goodsFormItems": {
+    "form": [
+      {
+        "type": "input",
+        "value": "",
+        "label": "名称",
+        "name": "name",
+        "style": {
+          "width": "50%"
+        }
+      },
+      {
+        "type": "input",
+        "value": "",
+        "label": "建筑名称",
+        "name": "buildingName",
+        "style": {
+          "width": "50%"
+        }
+      },
+      {
+        "type": "input",
+        "value": "",
+        "label": "建筑楼层",
+        "name": "buildingLevel",
+        "style": {
+          "width": "50%"
+        }
+      },
+      {
+        "type": "input",
+        "value": "",
+        "label": "房间号",
+        "name": "apartmentNumber",
+        "style": {
+          "width": "50%"
+        }
+      },
+      {
+        "type": "input",
+        "value": "",
+        "label": "门/窗型号",
+        "name": "doorWindowMode",
+        "style": {
+          "width": "50%"
+        }
+      },
+      {
+        "type": "input",
+        "value": "",
+        "label": "分体号",
+        "name": "splitNumber",
+        "style": {
+          "width": "50%"
+        }
+      },
+      {
+        "type": "select",
+        "options":[],
+        "prefix":"basic",
+        "api":"TypeofProduct/GetList?condition=[]",
+        "value": "",
+        "label": "产品大类",
+        "name": "largeCategoryCode",
+        "style": {
+          "width": "50%"
+        },
+        "rules": {
+          "required": true,
+          "message": "产品大类不能为空",
+          "trigger": "change"
+        }
+      },
+      {
+        "type": "select",
+        "options":[],
+        "value": "",
+        "label": "小类",
+        "name": "childrenType",
+        "style": {
+          "width": "50%"
+        },
+        "rules": {
+          "required": true,
+          "message": "产品小类不能为空",
+          "trigger": "change"
+        }
+      },
+      {
+        "type": "input",
+        "value": "",
+        "label": "颜色",
+        "name": "pigment",
+        "style": {
+          "width": "50%"
+        }
+      },
+      {
+        "type": "input",
+        "value": "",
+        "label": "规格",
+        "name": "specifications",
+        "style": {
+          "width": "50%"
+        }
+      },
+      {
+        "type": "select",
+        "options":[],
+        "prefix":"basic",
+        "api":"BaseProperty/GetList?condition=[%7B%22FieldName%22:%22Type%22,%22TableName%22:%22[BaseProperty]%22,%22Value%22:[%7B%22value%22:%22%E4%BC%9A%E8%AE%A1%E7%A7%91%E7%9B%AE%22%7D],%22TableRelationMode%22:%22AND%22,%22Mode%22:%22%E7%AD%89%E4%BA%8E%22,%22DataType%22:%22string%22%7D]",
+        "value": "",
+        "label": "会计科目",
+        "name": "accountSubject",
+        "style": {
+          "width": "50%"
+        }
+      },
+
+      {
+        "type": "switch",
+        "value": true,
+        "label": "状态",
+        "activeText":"启用",
+        "inactiveText":"禁用",
+        "name": "description",
+        "style": {
+          "width": "50%"
+        }
+     },{
+        "type": "select",
+        "options":[],
+        "value": "",
+        "prefix":"basic",
+        "api":"UnitSetting/GetList?condition=[]",
+        "label": "主单位",
+        "name": "unit",
+        "readonly":false,
+        "disabled":false,
+        "style": {
+          "width": "50%"
+        }
+      },
+      {
+        "type": "textarea",
+        "value": "",
+        "label": "备注",
+        "name": "description",
+        "inputStyle":{
+          "width":"560px"
+        },
+        "style": {
+          "width": "100%"
+        }
+     }
+    ]
+  }
+}

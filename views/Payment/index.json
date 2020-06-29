@@ -1,0 +1,46 @@
+{
+  "apiName":"basic",
+  "editDialogTitle": "付款方式设置",
+  "width": "700px",
+  "labelWidth": "80px",
+    "formItems": {
+    "form": [
+      {
+        "type": "input",
+        "value": "",
+        "label": "名称",
+        "name": "name",
+        "style": {
+          "width": "50%"
+        }
+      },
+      {
+        "type": "switch",
+        "value": "",
+        "label": "是否开具发票",
+        "name": "isInvoicing",
+        "style": {
+          "width": "50%"
+        }
+      },
+      {
+        "type": "switch",
+        "value": "",
+        "label": "是否关联银行账号",
+        "name": "isAssociated",
+        "style": {
+          "width": "50%"
+        }
+      },
+      {
+        "type": "input",
+        "value": "",
+        "label": "备注",
+        "name": "description",
+        "style": {
+          "width": "50%"
+        }
+     }
+    ]
+  }
+}

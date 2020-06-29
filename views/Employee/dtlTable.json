@@ -1,0 +1,79 @@
+{
+	"dtlTableData":[
+        {
+      "cellStyle": {
+        "height": "30px",
+        "padding": "5px 0"
+        },
+      "data": [],
+      "name":"first",
+      "label":"银行账户",
+      "total": 0,
+      "currentPage": 1,
+      "pageSize": 10,
+      "columns": [{
+          "type":"selection"
+        },{
+          "type": "index",
+          "label":"序号",
+          "width":"50px"
+        },
+        {
+          "prop": "name",
+          "label": "银行账户"
+        }
+        ,
+        {
+          "prop": "bankName",
+          "label": "开户行"
+        }
+        ,
+        {
+          "prop": "address",
+          "label": "银行地址"
+        }
+        ,
+        {
+          "prop": "type",
+          "label": "业务类型"
+        }
+        
+        ]
+        },
+        {
+      "cellStyle": {
+        "height": "30px",
+        "padding": "5px 0"
+        },
+      "data": [],
+      "name":"second",
+      "label":"附件",
+      "total": 0,
+      "currentPage": 1,
+      "pageSize": 10,
+      "columns": [{
+          "type":"selection"
+        },{
+          "type": "index",
+          "label":"序号",
+          "width":"50px"
+        },
+        {
+          "prop": "name",
+          "label": "附件名称"
+        }
+        ,
+        {
+          "prop": "createDate",
+          "label": "上传日期",
+          "dateFormatter":true
+        }
+        ,
+        {
+          "prop": "createName",
+          "label": "操作人"
+        }
+        ]
+        }
+  ]
+}

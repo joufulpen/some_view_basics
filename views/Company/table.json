@@ -1,0 +1,56 @@
+{
+  "hdrTableData":{
+      "cellStyle": {
+        "height": "30px",
+        "padding": "5px 0"
+        },
+      "data": [],
+      "total": 0,
+      "currentPage": 1,
+      "pageSize": 10,
+      "columns": [{
+          "type": "selection"
+        },
+        {
+          "prop": "name",
+          "label": "名称"
+        }
+        ,
+        {
+          "prop": "enName",
+          "label": "英文名称"
+        }
+        ,
+        {
+          "prop": "enNameShort",
+          "label": "英文简称"
+        }
+        ,
+        {
+          "prop": "logoImg",
+          "label": "图片名称"
+        }
+        ,
+        {
+          "prop": "sealImg",
+          "label": "采购公章图片名称"
+        }
+        ,
+        {
+          "prop": "phone",
+          "label": "联系电话"
+        }
+        ,
+        {
+          "prop": "fax",
+          "label": "传真"
+        }
+        ,
+        {
+          "prop": "description",
+          "label": "备注"
+        }
+        ]
+        }
+  
+}

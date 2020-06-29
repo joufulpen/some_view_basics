@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <!-- title为变量 是模块的名字 -->
+  <title>客户管理</title>
+    <script>
+      window.coolLocals={}
+      window.extraJsons = ['dtlTable.json','province.json', 'city.json']
+    </script>      
+  <script src="/settings.js"></script>
+</head>
+
+<body>
+  <div id="root" v-cloak > 
+       <!--cool-single-view  cool-single-dialog  组件为固定组件 需模板生成-->
+     <cool-master-view ref="masterView" :unique-deploy-key="uniqueDeployKey" :axios-setting="axiosSetting" :dialogs="dialogs" :is-methods="isMethods" @table-row-click="tableRowClick" @table-row-dblclick="tableRowDblclick"  @table-select-change="tableSelectionChange"  @pagination-size-change="paginationSizeChange" @pagination-current-change="paginationCurrentChange" @get-condition="getCondition" @looking="looking" @custom-new="customNew" @custom-edit="customEdit" @custom-delete="customDelete">
+     </cool-master-view>
+   <!--   <cool-single-dialog :unique-key="uniqueKey" :visible.sync="dialogVisible" :is-methods="isDialogMethods" @update-form="updateForm" @save-event="saveEvent"></cool-single-dialog> -->
+   <cool-just-dialog  :title="dialogTitle" :visible.sync="dialogVisible" :width="justDialogWidth" @save-event="tableSaveEvent" @back-event="tableBackEvent"  @closedialog="tableBackEvent" :show-save-button="showSaveButton" :save-btn-disabled="isSaveDisabled">
+        <template slot="dialogSlot">
+            <div style="border:1px solid #DCDFE6">
+              <cool-form-view ref="formItems" :form-items="formItems" @update-form='updateForm'  size="mini" :inline="true" label-width="140px"></cool-form-view>
+               <el-tabs  type="border-card" style="margin-top: 15px" @tab-click="handleClick">
+                  <el-tab-pane label="联系人管理" >
+                    <cool-button-group :buttons="dtlButtons" @button-click="contactBtnEvent" ></cool-button-group>
+                    <cool-table-view ref="contactTable" :height="tableHeigh" :data="contactData" :columns="contactColumns" @table-selection-change="dltSelection"></cool-table-view>
+                  </el-tab-pane>
+                  <el-tab-pane label="银行账户管理" >
+                    <cool-button-group :buttons="dtlButtons" @button-click="bankBtnEvent"></cool-button-group>
+                    <cool-table-view ref="bankTable" :height="tableHeigh" :data="bankData" :columns="bankColumns" @table-selection-change="dltSelection"></cool-table-view>
+                  </el-tab-pane>
+                  <el-tab-pane label="附件" >
+                    <cool-button-group :buttons="attaButtons" @button-click="attaBtnEvent"></cool-button-group>
+                    <cool-table-view ref="attaTable" :height="tableHeigh" :data="attachmentData" :columns="attaColumns" @table-selection-change="dltSelection"></cool-table-view>
+                  </el-tab-pane>
+                </el-tabs>
+            </div>       
+        </template>
+      </cool-just-dialog>
+      
+   <cool-just-dialog  :title="editDialogTitle" :visible.sync="editDialogVisible" :width="editDialogWidth" @save-event="editTableSaveEvent" @back-event="editTableBackEvent"  @closedialog="editTableBackEvent" :show-save-button="showSaveButton">
+        <template slot="dialogSlot">
+            <div style="border:1px solid #DCDFE6">
+              <cool-form-view ref="editFormItems" :form-items="editFormItems" @update-form='editUpdateForm'  size="mini" :inline="true" label-width="100px">
+              </cool-form-view>
+            </div>       
+        </template>
+      </cool-just-dialog>
+    <!-- 上传组件 -->
+    <cool-upload v-if="uploadDialogVisible" :visible.sync="uploadDialogVisible" :parent-id="parentId" :parent-type="parentType" @upload-success="uploadSuccess"></cool-upload>
+  </div>
+</body>
+</html>

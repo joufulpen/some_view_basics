@@ -1,0 +1,36 @@
+{
+  "singleTableData":{
+      "cellStyle": {
+        "height": "30px",
+        "padding": "5px 0"
+        },
+      "data": [],
+      "total": 0,
+      "currentPage": 1,
+      "pageSize": 10,
+      "columns": [{
+          "type": "selection"
+        },
+        {
+          "prop": "name",
+          "label": "名称"
+        }
+        ,
+        {
+          "prop": "parentID",
+          "label": "父级编号"
+        }
+        ,
+        {
+          "prop": "remark",
+          "label": "类型描述"
+        }
+        ,
+        {
+          "prop": "description",
+          "label": "备注"
+        }
+        ]
+        }
+  
+}

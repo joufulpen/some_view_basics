@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <!-- title为变量 是模块的名字 -->
+  <title>物料类型表</title>
+    <script>window.coolLocals={}</script>
+  <script src="/settings.js"></script>
+
+</head>
+<style>
+
+</style>
+<body>
+  <div id="root" v-cloak> 
+       <!--cool-single-view  cool-single-dialog  组件为固定组件 需模板生成-->
+     <cool-single-view ref="treeView" :unique-deploy-key="uniqueDeployKey" :axios-setting="axiosSetting" :dialogs="dialogs" :show-mode-list="showModeList" :is-methods="isMethods" @table-row-click="tableRowClick" @table-row-dblclick="tableRowDblclick"  @table-selection-change="tableSelectionChange"  @pagination-size-change="paginationSizeChange" @pagination-current-change="paginationCurrentChange" @get-condition="getCondition"  @custom-new="customNew" @custom-edit="customEdit"></cool-single-view>
+    
+   <!--   <cool-single-dialog :unique-key="uniqueKey" :visible.sync="dialogVisible" :is-methods="isDialogMethods" @update-form="updateForm" @save-event="saveEvent"></cool-single-dialog> -->
+    <el-dialog :title="dialogTitle" :visible.sync="dialogVisible" width="400px" @close="backEvent" :close-on-click-modal="false" :close-on-press-escape="false">
+      <div style="border:1px solid #DCDFE6">    
+        <cool-form-view ref="ruleForm" :form-items="formItems" @update-form="getForm" size="mini" label-width="120px" ></cool-form-view>
+      </div>
+          <el-button @click="backEvent" size="mini" style="border-top: none">取 消</el-button>
+          <el-button @click="saveEvent" size="mini" style="float:right;border-top: none">保 存</el-button>
+      </el-dialog>
+</body>
+</html>

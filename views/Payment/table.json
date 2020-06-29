@@ -1,0 +1,36 @@
+{
+  "singleTableData":{
+      "cellStyle": {
+        "height": "30px",
+        "padding": "5px 0"
+        },
+      "data": [],
+      "total": 0,
+      "currentPage": 1,
+      "pageSize": 10,
+      "columns": [{
+          "type": "selection"
+        },
+        {
+          "prop": "name",
+          "label": "名称"
+        }
+        ,
+        {
+          "prop": "isInvoicing",
+          "label": "是否开具发票"
+        }
+        ,
+        {
+          "prop": "isAssociated",
+          "label": "是否关联银行账号"
+        }
+        ,
+        {
+          "prop": "description",
+          "label": "备注"
+        }
+        ]
+        }
+  
+}

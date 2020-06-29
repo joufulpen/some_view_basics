@@ -1,0 +1,28 @@
+{
+	"singleTableData":{
+      "cellStyle": {
+        "height": "30px",
+        "padding": "5px 0"
+        },
+      "data": [],
+      "total": 0,
+      "currentPage": 1,
+      "pageSize": 10,
+      "columns": [{
+          "type": "selection"
+        },
+        {
+          "prop": "businessTrace",
+          "label": "业务序号"
+        },
+        {
+          "prop": "fileCode",
+          "label": "文件序号"
+        },
+        {
+          "prop": "fileName",
+          "label": "文件名"
+        }
+        ]
+  }
+}

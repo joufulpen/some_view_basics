@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <!-- title为变量 是模块的名字 -->
+  <title>产品资料管理</title>
+    <script>
+      window.coolLocals={}
+      window.extraJsons = ['dialogForm.json']
+    </script>
+  <script src="/settings.js"></script>
+</head>
+
+<body>
+  <div id="root" v-cloak > 
+       <!--cool-single-view  cool-single-dialog  组件为固定组件 需模板生成-->
+     <cool-single-view ref="singleView" :unique-deploy-key="uniqueDeployKey" :axios-setting="axiosSetting" :dialogs="dialogs" :show-mode-list="showModeList" :is-methods="isMethods" @table-row-click="tableRowClick" @table-row-dblclick="tableRowDblclick"  @table-selection-change="tableSelectionChange"  @pagination-size-change="paginationSizeChange" @pagination-current-change="paginationCurrentChange" @get-condition="getCondition" @product-price="productPrice" @store-manage="storeManage" @purchase-manage="purchaseManage" @custom-new="customNew" @custom-edit="customEdit"></cool-single-view>
+   <!--   <cool-single-dialog ref="singleDialog" :unique-key="uniqueKey" :visible.sync="dialogVisible" :is-methods="isDialogMethods" @update-form="updateForm" @save-event="saveEvent">
+         <template slot="formSlot">
+           <div style="margin-bottom:15px" >
+                <span style="font-size:16px;vertical-align: middle;font-weight:bold">生产属性</span>
+                <cool-form-view ref="productCoolForm" :form-items="productFormItems" size="mini" :inline="true" :label-width="productLabelWidth" @update-form="productUpdateForm"></cool-form-view>
+          </div>
+         </template>
+     </cool-single-dialog> -->
+      <!--新建弹窗-->
+      <cool-just-dialog  :title="goodsDialogTitle" :visible.sync="dialogVisible"  :width="dialogWidth" @closedialog="newBackEvent" @back-event="newBackEvent" >
+        <template slot="dialogSlot">
+            <div style="border:1px solid #DCDFE6;" >
+              <el-tabs type="border-card" style="padding-bottom: 20px" v-model="activeName" >
+                <el-tab-pane label="基础信息" name="first">
+                  <cool-form-view ref="goodsCoolForm" :form-items="goodsFormItems" size="mini" :inline="true" :label-width="purchaseLabelWidth" @update-form="updateForm"></cool-form-view>
+                  <el-row>
+                    <el-col :span="24" style="padding:15px 20px 0 0;">
+                      <el-button type="primary" @click="baseSubmit" style="float:right;" :disabled="allowGoodsNew">提交</el-button>
+                    </el-col>
+                  </el-row>
+                </el-tab-pane>
+                <el-tab-pane label="库存属性" name="second">
+                  <cool-form-view ref="storeCoolForm" :form-items="storeFormItems" size="mini" :inline="true" :label-width="purchaseLabelWidth" @update-form="storeUpdateForm"></cool-form-view>
+                  <el-row>
+                    <el-col :span="24" style="padding:15px 20px 0 0;">
+                      <el-button type="primary" @click="storeSaveEvent" style="float:right;" :disabled="allowNew">提交</el-button>
+                    </el-col>
+                  </el-row>
+                </el-tab-pane>
+                <el-tab-pane label="采购属性" name="third"> 
+                  <cool-form-view ref="purchaseCoolForm" :form-items="purchaseFormItems" size="mini" :inline="true" :label-width="purchaseLabelWidth" @update-form="purchaseUpdateForm"></cool-form-view>
+                  <el-row>
+                    <el-col :span="24" style="padding:15px 20px 0 0;">
+                      <el-button type="primary" @click="purchaseSaveEvent" style="float:right;" :disabled="allowNew">提交</el-button>
+                    </el-col>
+                  </el-row>
+                </el-tab-pane>
+                <el-tab-pane label="生产属性" name="fourth">
+                  <cool-form-view ref="productCoolForm" :form-items="productFormItems" size="mini" :inline="true" :label-width="purchaseLabelWidth" @update-form="productUpdateForm"></cool-form-view>
+                  <el-row>
+                    <el-col :span="24" style="padding:15px 20px 0 0;">
+                      <el-button type="primary" @click="productSaveEvent" style="float:right;" :disabled="allowNew">提交</el-button>
+                    </el-col>
+                  </el-row>
+                </el-tab-pane>
+              </el-tabs>
+            </div>       
+        </template>
+      </cool-just-dialog>
+
+      <!-- 产品报价弹窗 -->
+       <el-dialog ref="editDialog" :title="editDialogTitle" :visible.sync="productDialogVisible"  :close-on-click-modal="false" @close="backEvent" width="1050px"  :close-on-press-escape="isFalse" append-to-body>
+      <div style="border:1px solid #DCDFE6">
+       <el-tabs type="border-card" style="margin-bottom: 35px">
+            <el-tab-pane label="产品信息">
+                <cool-table-view :columns="columns" :data="materialTableData"  :stripe="stripe"></cool-table-view>
+                </el-tab-pane>
+          </el-tabs>  
+      <el-tabs type="border-card" >
+            <el-tab-pane label="产品报价表">
+              <cool-button-group :buttons="buttons" @button-click="buttonClick"></cool-button-group>
+              <cool-table-view :columns="inColumns" :data="supplierTableData" :height="tableHeight" @table-row-click="outRowClick" @table-selection-change="outSelection" :stripe="stripe"></cool-table-view>
+            </el-tab-pane>
+          </el-tabs>  
+      </div>       
+          <el-button  size="mini" @click="backEvent" style="border-top: none">返 回</el-button>
+          <el-button  size="mini" @click="priceSaveEvent" style="float:right;border-top: none">保 存</el-button>
+      </el-dialog>
+      <!-- 编辑物料弹窗 -->
+      <el-dialog ref="editDialog" :title="dialogTitle" :visible.sync="editDialogTitleVisible" width="400px" :close-on-click-modal="false" @close="tableBackEvent"   :close-on-press-escape="isFalse" append-to-body>
+      <div style="border:1px solid #DCDFE6">
+        <cool-form-view ref="formItems" :form-items="editDialogFormItems" @update-form='dialogUpdateForm' size="mini" :inline="true" label-width="100px" @query-search="querySearch"></cool-form-view>
+      </div>       
+          <el-button size="mini" @click="tableBackEvent" style="border-top: none">取 消</el-button>
+          <el-button size="mini" @click="tableSaveEvent" style="float:right;border-top: none">确 认</el-button>
+      </el-dialog>
+       <!-- 库存属性管理弹窗 -->
+    <!--   <el-dialog ref="storeManage" title="产品库存信息管理" :visible.sync="storeDialogVisible" :close-on-click-modal="false"  width="850px" @close="storeBackEvent" :close-on-press-escape="isFalse" append-to-body>
+          <div style="border:1px solid #DCDFE6">
+          <div style="margin-bottom:15px" v-for="item in storeFormItems" :key="item.index">
+                <span style="font-size:16px;vertical-align: middle;font-weight:bold">{{item.title}}</span>
+                <cool-form-view ref="storeCoolForm" :form-items="item.formItems" size="mini" :inline="true" :label-width="storeLabelWidth" @update-form="storeUpdateForm"></cool-form-view>
+      </div>
+      </div>
+         <el-button  size="mini" @click="storeBackEvent" style="border-top: none">返 回</el-button>
+          <el-button  size="mini" @click="storeSaveEvent" style="float:right;border-top: none">保 存</el-button>
+      </el-dialog> -->
+      <!-- 采购属性管理弹窗 -->
+    <!--   <el-dialog ref="purchaseManage" title="产品采购信息管理" :visible.sync="purchaseDialogVisible" :close-on-click-modal="false"  width="750px" @close="purchaseBackEvent" :close-on-press-escape="isFalse" append-to-body>
+          <div style="border:1px solid #DCDFE6">
+          <div style="margin-bottom:15px" v-for="item in purchaseFormItems" :key="item.index">
+                <span style="font-size:16px;vertical-align: middle;font-weight:bold">{{item.title}}</span>
+                <cool-form-view ref="purchaseCoolForm" :form-items="item.formItems" size="mini" :inline="true" :label-width="purchaseLabelWidth" @update-form="purchaseUpdateForm"></cool-form-view>
+      </div>
+      </div>
+         <el-button  size="mini" @click="purchaseBackEvent" style="border-top: none">返 回</el-button>
+          <el-button  size="mini" @click="purchaseSaveEvent" style="float:right;border-top: none">保 存</el-button>
+      </el-dialog> -->
+  </div>
+</body>
+</html>

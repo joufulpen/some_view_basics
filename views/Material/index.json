@@ -1,0 +1,166 @@
+{
+  "apiName": "basic",
+  "goodsDialogTitle": "物料资料设置",
+  "width": "800px",
+  "labelWidth": "auto",
+  "goodsFormItems": {
+    "form": [{
+        "type": "input",
+        "value": "",
+        "label": "物料编号",
+        "name": "id",
+        "readonly": true,
+        "disabled": true,
+        "style": {
+          "width": "50%"
+        }
+      }, {
+        "type": "input",
+        "value": "",
+        "label": "物料名称",
+        "name": "name",
+        "readonly": false,
+        "disabled": false,
+        "style": {
+          "width": "50%"
+        }
+      }, {
+        "type": "input",
+        "value": "",
+        "label": "物料别名",
+        "name": "byname",
+        "readonly": false,
+        "disabled": false,
+        "style": {
+          "width": "50%"
+        }
+      }, {
+        "type": "select",
+        "options": [],
+        "prefix": "basic",
+        "api": "TypeofMaterial/GetList?condition=[]&orderby=",
+        "value": "",
+        "label": "物料大类",
+        "name": "materialClass",
+        "readonly": false,
+        "disabled": false,
+        "style": {
+          "width": "50%"
+        },
+        "rules": {
+          "required": true,
+          "message": "物料大类不能为空",
+          "trigger": "change"
+        }
+      }, {
+        "type": "select",
+        "options": [],
+        "value": "",
+        "label": "物料小类",
+        "name": "materialSubclass",
+        "readonly": false,
+        "disabled": false,
+        "style": {
+          "width": "50%"
+        },
+        "rules": {
+          "required": true,
+          "message": "物料小类不能为空",
+          "trigger": "change"
+        }
+      }, {
+        "type": "input",
+        "value": "",
+        "label": "英文名称",
+        "name": "enName",
+        "readonly": false,
+        "disabled": false,
+        "style": {
+          "width": "50%"
+        }
+      }, {
+        "type": "input",
+        "value": "",
+        "label": "物料颜色",
+        "name": "pigment",
+        "readonly": false,
+        "disabled": false,
+        "style": {
+          "width": "50%"
+        }
+      }, {
+        "type": "input",
+        "value": "",
+        "label": "品牌型号",
+        "name": "version",
+        "readonly": false,
+        "disabled": false,
+        "style": {
+          "width": "50%"
+        }
+      }, {
+        "type": "input",
+        "value": "",
+        "label": "物料规格",
+        "name": "specifications",
+        "readonly": false,
+        "disabled": false,
+        "style": {
+          "width": "50%"
+        }
+      }, {
+        "type": "select",
+        "options": [],
+        "prefix": "basic",
+        "api": "BaseProperty/GetList?condition=[%7B%22FieldName%22:%22Type%22,%22TableName%22:%22[BaseProperty]%22,%22Value%22:[%7B%22value%22:%22%E4%BC%9A%E8%AE%A1%E7%A7%91%E7%9B%AE%22%7D],%22TableRelationMode%22:%22AND%22,%22Mode%22:%22%E7%AD%89%E4%BA%8E%22,%22DataType%22:%22string%22%7D]",
+        "value": "",
+        "label": "会计科目",
+        "name": "accountSubject",
+        "readonly": false,
+        "disabled": false,
+        "style": {
+          "width": "50%"
+        }
+      }, {
+        "type": "select",
+        "options": [],
+        "prefix": "basic",
+        "api": "UnitSetting/GetList?condition=[]",
+        "value": "",
+        "label": "主单位",
+        "name": "unit",
+        "readonly": false,
+        "disabled": false,
+        "style": {
+          "width": "50%"
+        }
+      }, 
+      {
+        "type": "switch",
+        "value": true,
+        "readonly": false,
+        "disabled": false,
+        "label": "状态",
+        "activeText": "启用",
+        "inactiveText": "禁用",
+        "name": "active",
+        "style": {
+          "width": "50%"
+        }
+      }, {
+        "type": "input",
+        "value": "",
+        "label": "备注",
+        "name": "description",
+        "readonly": false,
+        "disabled": false,
+        "inputStyle": {
+          "width": "574px"
+        },
+        "style": {
+          "width": "100%"
+        }
+      }
+    ]
+  }
+}

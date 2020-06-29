@@ -1,0 +1,98 @@
+{
+  "buttons":[{
+        "text": "查询",
+        "size": "mini",
+        "icon": "#iconchaxun",
+        "disabled": false,
+        "controlDisable":"",
+        "key": "looking"
+      },
+      {
+        "text": "新建",
+        "size": "mini",
+        "icon": "#iconxinzeng",
+        "disabled": false,
+        "controlDisable":"",
+        "key": "custom-new"
+      },
+      {
+        "text": "编辑",
+        "size": "mini",
+        "icon": "#iconERP_bianji",
+        "disabled": true,
+        "controlDisable":"single",
+        "key": "custom-edit"
+      },
+      {
+        "text": "删除",
+        "size": "mini",
+        "icon": "#iconERP_shanchu",
+        "disabled": true,
+        "controlDisable":"single",
+        "key": "custom-delete"
+      },
+      {
+        "text": "用户角色绑定",
+        "size": "mini",
+        "icon": "#iconshenhe",
+        "disabled": true,
+        "controlDisable":"single",
+        "key":"users-building"
+      },{
+        "text": "生成邀请码",
+        "size": "mini",
+        "icon": "#iconshenheliucheng",
+        "disabled": true,
+        "controlDisable":"single",
+        "key":"invitation-code"
+      }
+      ],
+  "dtlButtons":[{
+        "text": "新增",
+        "size": "mini",
+        "icon": "#iconxinzeng",
+        "disabled": false,
+        "controlDisable":"",
+        "key": "custom-new"
+      },
+      {
+        "text": "修改",
+        "size": "mini",
+        "icon": "#iconERP_bianji",
+        "disabled": true,
+        "controlDisable":"single",
+        "key": "custom-edit"
+      },
+      {
+        "text": "删除",
+        "size": "mini",
+        "icon": "#iconERP_shanchu",
+        "disabled": true,
+        "controlDisable":"single",
+        "key": "custom-delete"
+      }], 
+  "attaButtons":[{
+        "text": "新增",
+        "size": "mini",
+        "icon": "#iconxinzeng",
+        "disabled": false,
+        "controlDisable":"",
+        "key": "custom-new"
+      },
+      {
+        "text": "下载",
+        "size": "mini",
+        "icon": "#iconxiazai",
+        "disabled": true,
+        "controlDisable":"single",
+        "key": "custom-edit"
+      },
+      {
+        "text": "删除",
+        "size": "mini",
+        "icon": "#iconERP_shanchu",
+        "disabled": true,
+        "controlDisable":"single",
+        "key": "custom-delete"
+      }]
+}

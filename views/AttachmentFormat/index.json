@@ -1,0 +1,36 @@
+{
+  "apiName":"basic",
+  "editDialogTitle": "附件类型设置",
+  "width": "700px",
+  "labelWidth": "80px",
+  "formItems": {
+    "form": [{
+        "type": "input",
+        "value": "",
+        "label": "类型名称",
+        "name": "id",
+        "style": {
+          "width": "50%"
+        }
+      },
+      {
+        "type": "inputNumber",
+        "value": "",
+        "label": "文件大小(MB)",
+        "name": "sizeLimit",
+        "style": {
+          "width": "50%"
+        }
+      },
+      {
+        "type": "input",
+        "value": "",
+        "label": "备注",
+        "name": "description",
+        "style": {
+          "width": "50%"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,147 @@
+{
+	"queryCondition": {
+        "Name": {
+              "value": "",
+              "mode": "不参与",
+              "modeList":[],
+              "dataType": "string",
+              "fieldName": "Name",
+              "tableRelationMode": "AND",
+              "tableName":"[Prepayment]",
+              "name": "名称",
+              "form": "input"
+        }
+        ,
+        "PaymentMode": {
+              "value": "",
+              "mode": "不参与",
+              "modeList":[],
+              "dataType": "string",
+              "fieldName": "PaymentMode",
+              "tableRelationMode": "AND",
+              "tableName":"[Prepayment]",
+              "name": "付款方式",
+              "form": "input"
+        }
+        ,
+        "RequiredDate": {
+              "value": "",
+              "mode": "不参与",
+              "modeList":[],
+              "dataType": "string",
+              "fieldName": "RequiredDate",
+              "tableRelationMode": "AND",
+              "tableName":"[Prepayment]",
+              "name": "要求转账日期",
+              "form": "input"
+        }
+        ,
+        "IsUrgent": {
+              "value": "",
+              "mode": "不参与",
+              "modeList":[],
+              "dataType": "string",
+              "fieldName": "IsUrgent",
+              "tableRelationMode": "AND",
+              "tableName":"[Prepayment]",
+              "name": "是否加急",
+              "form": "input"
+        }
+        ,
+        "Payer": {
+              "value": "",
+              "mode": "不参与",
+              "modeList":[],
+              "dataType": "string",
+              "fieldName": "Payer",
+              "tableRelationMode": "AND",
+              "tableName":"[Prepayment]",
+              "name": "支付人",
+              "form": "input"
+        }
+        ,
+        "PaymentAccount": {
+              "value": "",
+              "mode": "不参与",
+              "modeList":[],
+              "dataType": "string",
+              "fieldName": "PaymentAccount",
+              "tableRelationMode": "AND",
+              "tableName":"[Prepayment]",
+              "name": "付款账号",
+              "form": "input"
+        }
+        ,
+        "BankAccount": {
+              "value": "",
+              "mode": "不参与",
+              "modeList":[],
+              "dataType": "string",
+              "fieldName": "BankAccount",
+              "tableRelationMode": "AND",
+              "tableName":"[Prepayment]",
+              "name": "开户银行",
+              "form": "input"
+        }
+        ,
+        "PrepaidRatio": {
+              "value": "",
+              "mode": "不参与",
+              "modeList":[],
+              "dataType": "string",
+              "fieldName": "PrepaidRatio",
+              "tableRelationMode": "AND",
+              "tableName":"[Prepayment]",
+              "name": "预付比例",
+              "form": "input"
+        }
+        ,
+        "IsTaxPrice": {
+              "value": "",
+              "mode": "不参与",
+              "modeList":[],
+              "dataType": "string",
+              "fieldName": "IsTaxPrice",
+              "tableRelationMode": "AND",
+              "tableName":"[Prepayment]",
+              "name": "单价",
+              "form": "input"
+        }
+        ,
+        "IsAttachment": {
+              "value": "",
+              "mode": "不参与",
+              "modeList":[],
+              "dataType": "string",
+              "fieldName": "IsAttachment",
+              "tableRelationMode": "AND",
+              "tableName":"[Prepayment]",
+              "name": "附件",
+              "form": "input"
+        }
+        ,
+        "IsAccountMode": {
+              "value": "",
+              "mode": "不参与",
+              "modeList":[],
+              "dataType": "string",
+              "fieldName": "IsAccountMode",
+              "tableRelationMode": "AND",
+              "tableName":"[Prepayment]",
+              "name": "结算方式",
+              "form": "input"
+        }
+        ,
+        "Description": {
+              "value": "",
+              "mode": "不参与",
+              "modeList":[],
+              "dataType": "string",
+              "fieldName": "description",
+              "tableRelationMode": "AND",
+              "tableName":"[Prepayment]",
+              "name": "备注",
+              "form": "input"
+        }
+  }
+}

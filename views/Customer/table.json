@@ -1,0 +1,72 @@
+{
+  "hdrTableData":{
+      "cellStyle": {
+        "height": "30px",
+        "padding": "5px 0"
+        },
+      "data": [],
+      "total": 0,
+      "currentPage": 1,
+      "pageSize": 10,
+      "columns": [{
+          "type": "selection"
+        },
+        {
+          "prop": "name",
+          "label": "客户名称"
+        }
+        ,
+        {
+          "prop": "type",
+          "label": "客户类型"
+        }
+        ,
+        {
+          "prop": "legalRepresentative",
+          "label": "法人代表"
+        }
+        ,{
+          "prop": "province",
+          "label": "省份"
+        }
+        ,{
+          "prop": "city",
+          "label": "城市"
+        }
+        ,{
+          "prop": "address",
+          "label": "详细地址"
+        }
+        ,{
+          "prop": "taxpayerType",
+          "label": "纳税人类型"
+        }
+        ,{
+          "prop": "invoiceType",
+          "label": "开票类型"
+        }
+        ,{
+          "prop": "invoiceName",
+          "label": "开票名称"
+        }
+        ,{
+          "prop": "taxpayerIdentification",
+          "label": "纳税人识别号"
+        }
+        ,{
+          "prop": "defaultContactName",
+          "label": "默认联系人"
+        }
+        ,{
+          "prop": "defaultBankAccountName",
+          "label": "默认银行账户"
+        }
+        ,
+        {
+          "prop": "description",
+          "label": "备注"
+        }
+        ]
+        }
+  
+}

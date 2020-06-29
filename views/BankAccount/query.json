@@ -1,0 +1,87 @@
+{
+	"queryCondition": {
+        "Name": {
+              "value": "",
+              "mode": "相似",
+              "modeList":[],
+              "dataType": "string",
+              "fieldName": "Name",
+              "tableRelationMode": "AND",
+              "tableName":"[BankAccount]",
+              "name": "名称",
+              "form": "input"
+        }
+        ,
+        "Account": {
+              "value": "",
+              "mode": "相似",
+              "modeList":[],
+              "dataType": "string",
+              "fieldName": "Account",
+              "tableRelationMode": "AND",
+              "tableName":"[BankAccount]",
+              "name": "银行账号",
+              "form": "input"
+        }
+        ,
+        "AccountName": {
+              "value": "",
+              "mode": "不参与",
+              "modeList":[],
+              "dataType": "string",
+              "fieldName": "AccountName",
+              "tableRelationMode": "AND",
+              "tableName":"[BankAccount]",
+              "name": "开户名",
+              "form": "input"
+        }
+        ,
+        "Address": {
+              "value": "",
+              "mode": "不参与",
+              "modeList":[],
+              "dataType": "string",
+              "fieldName": "Address",
+              "tableRelationMode": "AND",
+              "tableName":"[BankAccount]",
+              "name": "银行地址",
+              "form": "input"
+        }
+        ,
+        "Phone": {
+              "value": "",
+              "mode": "不参与",
+              "modeList":[],
+              "dataType": "string",
+              "fieldName": "Phone",
+              "tableRelationMode": "AND",
+              "tableName":"[BankAccount]",
+              "name": "联系电话",
+              "form": "input"
+        }
+        ,
+        "CompanyID": {
+              "value": "",
+              "mode": "不参与",
+              "modeList":[],
+              "dataType": "string",
+              "fieldName": "CompanyID",
+              "tableRelationMode": "AND",
+              "tableName":"[BankAccount]",
+              "name": "公司",
+              "form": "input"
+        },
+        
+        "Description": {
+              "value": "",
+              "mode": "不参与",
+              "modeList":[],
+              "dataType": "string",
+              "fieldName": "description",
+              "tableRelationMode": "AND",
+              "tableName":"[BankAccount]",
+              "name": "备注",
+              "form": "input"
+        }
+  }
+}

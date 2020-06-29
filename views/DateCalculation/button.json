@@ -1,0 +1,65 @@
+{
+  "buttons":[{
+        "text": "查询",
+        "size": "mini",
+        "icon": "#iconchaxun",
+        "disabled": false,
+        "controlDisable":"",
+        "key": "query"
+      },
+      {
+        "text": "新建",
+        "size": "mini",
+        "icon": "#iconxinzeng",
+        "disabled": false,
+        "controlDisable":"",
+        "key": "construction"
+      },
+      {
+        "text": "编辑",
+        "size": "mini",
+        "icon": "#iconERP_bianji",
+        "disabled": true,
+        "controlDisable":"single",
+        "key": "edit"
+      },
+      {
+        "text": "删除",
+        "size": "mini",
+        "icon": "#iconERP_shanchu",
+        "disabled": true,
+        "controlDisable":"single",
+        "key": "delete"
+      },
+      {
+        "text": "审核",
+        "size": "mini",
+        "icon": "#iconshenhe",
+        "disabled": false,
+        "controlDisable":"",
+        "key":"audit"
+      },{
+        "text": "打印",
+        "size": "mini",
+        "icon": "#icondayin",
+        "disabled": false,
+        "controlDisable":"",
+        "key":"print"
+      },
+      {
+        "text": "导出",
+        "size": "mini",
+        "icon": "#icondaochuwenjian",
+        "disabled": false,
+        "controlDisable":"",
+        "key":"export"
+      },{
+        "text": "统计",
+        "size": "mini",
+        "icon": "#icontongjitubiao",
+        "disabled": false,
+        "controlDisable":"",
+        "key":"statistics"
+      }
+      ]
+}

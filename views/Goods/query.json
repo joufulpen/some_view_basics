@@ -1,0 +1,139 @@
+{
+	"queryCondition": {
+        "ID": {
+              "value": "",
+              "mode": "不参与",
+              "modeList":[],
+              "dataType": "string",
+              "fieldName": "ID",
+              "tableRelationMode": "AND",
+              "tableName":"[Goods]",
+              "name": "编号",
+              "form": "input"
+        },		            
+        "Name": {
+              "value": "",
+              "mode": "相似",
+              "modeList":[],
+              "dataType": "string",
+              "fieldName": "Name",
+              "tableRelationMode": "AND",
+              "tableName":"[Goods]",
+              "name": "名称",
+              "form": "input"
+        }
+        ,
+        "LargeCategoryCode": {
+              "value": "",
+              "mode": "不参与",
+              "modeList":[],
+              "prefix":"basic",
+              "api":"TypeofProduct/GetList?condition=[]",
+              "options":[],
+              "dataType": "string",
+              "fieldName": "LargeCategoryCode",
+              "tableRelationMode": "AND",
+              "tableName":"[Goods]",
+              "name": "产品大类",
+              "form": "select"
+        }
+        ,
+        "ChildrenType": {
+              "value": "",
+              "mode": "不参与",
+              "modeList":[],
+              "options":[],
+              "dataType": "string",
+              "fieldName": "ChildrenType",
+              "tableRelationMode": "AND",
+              "tableName":"[Goods]",
+              "name": "小类",
+              "form": "select"
+        }
+        ,
+        "BuildingName": {
+              "value": "",
+              "mode": "不参与",
+              "modeList":[],
+              "dataType": "string",
+              "fieldName": "BuildingName",
+              "tableRelationMode": "AND",
+              "tableName":"[Goods]",
+              "name": "建筑名称",
+              "form": "input"
+        }
+        ,
+        "BuildingLevel": {
+              "value": "",
+              "mode": "不参与",
+              "modeList":[],
+              "dataType": "string",
+              "fieldName": "BuildingLevel",
+              "tableRelationMode": "AND",
+              "tableName":"[Goods]",
+              "name": "楼层",
+              "form": "input"
+        }
+        ,
+        "ApartmentNumber": {
+              "value": "",
+              "mode": "不参与",
+              "modeList":[],
+              "dataType": "string",
+              "fieldName": "ApartmentNumber",
+              "tableRelationMode": "AND",
+              "tableName":"[Goods]",
+              "name": "房间号",
+              "form": "input"
+        }
+        ,
+        "DoorWindowMode": {
+              "value": "",
+              "mode": "不参与",
+              "modeList":[],
+              "dataType": "string",
+              "fieldName": "DoorWindowMode",
+              "tableRelationMode": "AND",
+              "tableName":"[Goods]",
+              "name": "窗型号",
+              "form": "input"
+        }
+        ,
+        "SplitNumber": {
+              "value": "",
+              "mode": "不参与",
+              "modeList":[],
+              "dataType": "string",
+              "fieldName": "SplitNumber",
+              "tableRelationMode": "AND",
+              "tableName":"[Goods]",
+              "name": "分体号",
+              "form": "input"
+        }
+        ,
+        
+        "Pigment": {
+              "value": "",
+              "mode": "不参与",
+              "modeList":[],
+              "dataType": "string",
+              "fieldName": "Pigment",
+              "tableRelationMode": "AND",
+              "tableName":"[Goods]",
+              "name": "颜色",
+              "form": "input"
+        }
+        ,
+        "Specifications": {
+              "value": "",
+              "mode": "不参与",
+              "modeList":[],
+              "dataType": "string",
+              "fieldName": "Specifications",
+              "tableRelationMode": "AND",
+              "tableName":"[Goods]",
+              "name": "规格",
+              "form": "input"
+        }
+  }
+}

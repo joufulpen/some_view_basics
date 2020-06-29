@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>附件上传Demo</title>
+    <!-- <script src="/scripts/cool-master/cool-master.js"></script> -->
+    <script src="/settings.js"></script>
+  </head>
+  <body>
+    <div id="root" v-cloak>
+      <el-card shadow="never">
+        <el-upload ref="upload" :action="action" :headers="headers" :data="data" :auto-upload="false" :multiple="false" :limit="2" :on-change="handleChange" :on-success="handleSuccess">
+          <el-button size="mini" type="primary">选择文件</el-button>
+        </el-upload>
+      </el-card>
+      <el-button @click="save" type="success">保存</el-button>
+    </div>
+  </body>
+  <style>
+    .el-card {
+      width: 200px;
+      height: 100px;
+    }
+  </style>
+</html>

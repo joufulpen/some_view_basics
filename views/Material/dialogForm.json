@@ -1,0 +1,188 @@
+{
+  "storeFormItems":  {
+      "form": [{
+        "type": "inputNumber",
+        "value": "",
+        "label": "安全库存",
+        "name": "safetyStock",
+        "readonly":false,
+        "disabled":false,
+        "inputStyle":{
+          "width":"193px"
+        },
+        "style": {
+          "width": "50%"
+        }
+      },{
+        "type": "inputNumber",
+        "value": "",
+        "label": "最低库存",
+        "name": "minimumStock",
+        "readonly":false,
+        "disabled":false,
+        "inputStyle":{
+          "width":"193px"
+        },
+        "style": {
+          "width": "50%"
+        }
+      },{
+        "type": "inputNumber",
+        "value": "",
+        "label": "最高库存",
+        "name": "maximumStock",
+        "readonly":false,
+        "disabled":false,
+        "inputStyle":{
+          "width":"193px"
+        },
+        "style": {
+          "width": "50%"
+        }
+      },{
+        "type": "inputNumber",
+        "value": "",
+        "label": "逾期提醒天数",
+        "name": "promptOverdueDays",
+        "readonly":false,
+        "disabled":false,
+        "inputStyle":{
+          "width":"193px"
+        },
+        "style": {
+          "width": "50%"
+        }
+      },{
+        "type": "select",
+        "options": [],
+        "value": "",
+        "label": "库存单位",
+        "name": "stockKeepingUnit",
+        "readonly":false,
+        "disabled":false,
+        "inputStyle":{
+          "width":"193px"
+        },
+        "style": {
+          "width": "50%"
+        }
+      },{
+        "type": "input",
+        "value": "",
+        "label": "1主单位 = ",
+        "name": "transferCoefficient",
+        "appendSlotData":"库存单位",
+        "readonly":false,
+        "disabled":false,
+        "inputStyle":{
+          "width":"193px"
+        },
+        "style": {
+          "width": "50%"
+        }
+      },{
+        "type": "inputNumber",
+        "value": "",
+        "label": "呆滞天数",
+        "name": "dullDays",
+        "readonly":false,
+        "disabled":false,
+        "inputStyle":{
+          "width":"193px"
+        },
+        "style": {
+          "width": "50%"
+        }
+      },{
+        "type": "input",
+        "value": "",
+        "label": "库存备注",
+        "name": "description",
+        "readonly":false,
+        "disabled":false,
+        "inputStyle":{
+          "width":"193px"
+        },
+        "style": {
+          "width": "50%"
+        }
+      },{
+        "type": "switch",
+        "value": true,
+        "label": "是否启用批次管理",
+        "name": "isBatchManagement",
+        "readonly":false,
+        "disabled":false,
+        "style": {
+          "width": "50%"
+        }
+      },{
+        "type": "switch",
+        "value": true,
+        "label": "是否启用呆滞计算",
+        "name": "isDullCalculation",
+        "readonly":false,
+        "disabled":false,
+        "style": {
+          "width": "50%"
+        }
+      }]
+   } ,
+  "purchaseFormItems":  {
+      "form": [{
+        "type": "inputNumber",
+        "value": "",
+        "label": "采购周期(天)",
+        "name": "purchaseCycle",
+        "readonly": false,
+        "disabled": false,
+        "style": {
+          "width": "50%"
+        },
+        "inputStyle": {
+          "width": "193px"
+        }
+      }, {
+        "type": "input",
+        "value": "",
+        "label": "经济批量",
+        "name": "economicBatch",
+        "readonly": false,
+        "disabled": false,
+        "inputStyle": {
+          "width": "193px"
+        },
+        "style": {
+          "width": "50%"
+        }
+      },{
+        "type": "select",
+        "options": [],
+        "value": "",
+        "label": "采购单位",
+        "name": "purchaseUnit",
+        "readonly": false,
+        "disabled": false,
+        "inputStyle": {
+          "width": "193px"
+        },
+        "style": {
+          "width": "50%"
+        }
+      }, {
+        "type": "input",
+        "value": "",
+        "label": "1采购单位 = ",
+        "name": "purchaseUnitNum",
+        "appendSlotData": "主单位",
+        "readonly": false,
+        "disabled": false,
+        "inputStyle": {
+          "width": "193px"
+        },
+        "style": {
+          "width": "50%"
+        }
+      }]
+}
+}

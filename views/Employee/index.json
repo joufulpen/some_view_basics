@@ -1,0 +1,235 @@
+{
+  "apiName":"basic",
+  "editDialogTitle": "银行账户管理",
+  "width": "730px",
+  "labelWidth": "100px",
+    "formItems": {
+    "form": [
+      {
+        "type": "input",
+        "value": "",
+        "disabled":true,
+        "label": "员工编号",
+        "name": "id",
+        "inputStyle":{
+          "width":"193px"
+        },
+        "style": {
+          "width": "50%"
+        }
+      },
+      {
+        "type": "input",
+        "value": "",
+        "label": "姓名",
+        "name": "name",
+        "inputStyle":{
+          "width":"193px"
+        },
+        "style": {
+          "width": "50%"
+        },
+        "rules": {
+          "required": true,
+          "message": "姓名不能为空",
+          "trigger": "blur"
+        }
+      },
+      {
+        "type": "select",
+        "value": "",
+        "options":[],
+        "prefix":"basic",
+        "api":"BaseProperty/GetList?condition=[%7B%22FieldName%22:%22Type%22,%22TableName%22:%22[BaseProperty]%22,%22Value%22:[%7B%22value%22:%22%E6%80%A7%E5%88%AB%22%7D],%22TableRelationMode%22:%22AND%22,%22Mode%22:%22%E7%AD%89%E4%BA%8E%22,%22DataType%22:%22string%22%7D]",
+        "label": "性别",
+        "name": "sex",
+        "inputStyle":{
+          "width":"193px"
+        },
+        "style": {
+          "width": "50%"
+        },
+        "rules": {
+          "required": true,
+          "message": "性别不能为空",
+          "trigger": "change"
+        }
+      },
+      {
+        "type": "select",
+        "value": "",
+        "options":[],
+        "label": "民族",
+        "inputStyle":{
+          "width":"193px"
+        },
+        "name": "nation",
+        "style": {
+          "width": "50%"
+        }
+      },
+      {
+        "type": "select",
+        "options":[],
+        "prefix":"basic",
+        "api":"Department/GetList?condition=[%7B%22FieldName%22:%22Name%22,%22TableName%22:%22[Department]%22,%22Value%22:[%7B%22value%22:%22%22%7D],%22TableRelationMode%22:%22AND%22,%22Mode%22:%22%E7%9B%B8%E4%BC%BC%22,%22DataType%22:%22string%22%7D]",
+        "value": "",
+        "label": "部门",
+        "inputStyle":{
+          "width":"193px"
+        },
+        "name": "departmentID",
+        "style": {
+          "width": "50%"
+        }
+      },
+      {
+        "type": "input",
+        "value": "",
+        "label": "职位",
+        "inputStyle":{
+          "width":"193px"
+        },
+        "name": "position",
+        "style": {
+          "width": "50%"
+        }
+      },
+      {
+        "type": "input",
+        "value": "",
+        "label": "手机",
+        "inputStyle":{
+          "width":"193px"
+        },
+        "name": "phone",
+        "style": {
+          "width": "50%"
+        }
+      },
+      {
+        "type": "input",
+        "value": "",
+        "label": "邮箱",
+        "inputStyle":{
+          "width":"193px"
+        },
+        "name": "email",
+        "style": {
+          "width": "50%"
+        }
+      },
+      {
+        "type": "input",
+        "value": "",
+        "label": "身份证号码",
+        "inputStyle":{
+          "width":"193px"
+        },
+        "name": "idCard",
+        "style": {
+          "width": "50%"
+        }
+      },
+      {
+        "type": "date",
+        "value": "",
+        "label": "入职日期",
+        "inputStyle":{
+          "width":"193px"
+        },
+        "name": "hiredate",
+        "style": {
+          "width": "50%"
+        }
+      },
+      {
+        "type": "select",
+        "value": "",
+        "options":[],
+        "inputStyle":{
+          "width":"193px"
+        },
+        "label": "默认银行账户",
+        "name": "defaultBankAccountID",
+        "style": {
+          "width": "50%"
+        }
+      },
+      {
+        "type": "select",
+        "value": "",
+        "options":[{
+          "label":"在职",
+          "value":true
+        },{
+          "label":"离职",
+          "value":false
+        }],
+        "label": "当前状态",
+        "name": "active",
+        "clearable": false,
+        "inputStyle":{
+          "width":"193px"
+        },
+        "style": {
+          "width": "50%"
+        }
+      },
+      {
+        "type": "textarea",
+        "value": "",
+        "label": "备注",
+        "inputStyle":{
+          "width":"620px"
+        },
+        "name": "description",
+        "style": {
+          "width": "100%"
+        }
+     }
+    ]
+  },
+  "bankFormItems":{
+    "form":[{
+        "type": "input",
+        "value": "",
+        "label": "银行账户",
+        "name": "name",
+        "style": {
+          "width": "100%"
+        }
+      },{
+        "type": "input",
+        "value": "",
+        "label": "开户行",
+        "name": "bankName",
+        "style": {
+          "width": "100%"
+        }
+      },{
+        "type": "input",
+        "value": "",
+        "label": "银行地址",
+        "name": "address",
+        "style": {
+          "width": "100%"
+        }
+      },{
+        "type": "radio",
+        "radioItems":[{
+          "label":"对公业务",
+          "value":"对公业务"
+        },{
+          "label":"对私业务",
+          "value":"对私业务"
+        }],
+        "value": "对公业务",
+        "label": "业务类型",
+        "name": "type",
+        "style": {
+          "width": "100%"
+        }
+      }]
+  }
+}

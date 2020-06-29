@@ -1,0 +1,71 @@
+{
+  "singleTableData":{
+      "cellStyle": {
+        "height": "30px",
+        "padding": "5px 0"
+        },
+      "data": [],
+      "total": 0,
+      "currentPage": 1,
+      "pageSize": 10,
+      "columns": [{
+          "type": "selection"
+        },
+        {
+          "prop": "name",
+          "label": "名称"
+        }
+        ,
+        {
+          "prop": "customsClearance",
+          "label": "报关周期类型"
+        }
+        ,
+        {
+          "prop": "shippingCycle",
+          "label": "海运周期"
+        }
+        ,
+        {
+          "prop": "monday",
+          "label": "星期一报关周期"
+        }
+        ,
+        {
+          "prop": "tuesday",
+          "label": "星期二报关周期"
+        }
+        ,
+        {
+          "prop": "wednesday",
+          "label": "星期三报关周期"
+        }
+        ,
+        {
+          "prop": "thursday",
+          "label": "星期四报关周期"
+        }
+        ,
+        {
+          "prop": "friday",
+          "label": "星期五报关周期"
+        }
+        ,
+        {
+          "prop": "saturday",
+          "label": "星期六报关周期"
+        }
+        ,
+        {
+          "prop": "sunDay",
+          "label": "星期日报关周期"
+        }
+        ,
+        {
+          "prop": "description",
+          "label": "备注"
+        }
+        ]
+        }
+  
+}

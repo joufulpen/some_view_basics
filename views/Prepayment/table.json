@@ -1,0 +1,76 @@
+{
+  "singleTableData":{
+      "cellStyle": {
+        "height": "30px",
+        "padding": "5px 0"
+        },
+      "data": [],
+      "total": 0,
+      "currentPage": 1,
+      "pageSize": 10,
+      "columns": [{
+          "type": "selection"
+        },
+        {
+          "prop": "name",
+          "label": "名称"
+        }
+        ,
+        {
+          "prop": "paymentMode",
+          "label": "付款方式"
+        }
+        ,
+        {
+          "prop": "requiredDate",
+          "label": "要求转账日期"
+        }
+        ,
+        {
+          "prop": "isUrgent",
+          "label": "是否加急"
+        }
+        ,
+        {
+          "prop": "payer",
+          "label": "支付人"
+        }
+        ,
+        {
+          "prop": "paymentAccount",
+          "label": "付款账号"
+        }
+        ,
+        {
+          "prop": "bankAccount",
+          "label": "开户银行"
+        }
+        ,
+        {
+          "prop": "prepaidRatio",
+          "label": "预付比例"
+        }
+        ,
+        {
+          "prop": "isTaxPrice",
+          "label": "单价"
+        }
+        ,
+        {
+          "prop": "isAttachment",
+          "label": "附件"
+        }
+        ,
+        {
+          "prop": "isAccountMode",
+          "label": "结算方式"
+        }
+        ,
+        {
+          "prop": "description",
+          "label": "备注"
+        }
+        ]
+        }
+  
+}

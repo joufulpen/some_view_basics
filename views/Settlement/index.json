@@ -1,0 +1,46 @@
+{
+  "apiName":"basic",
+  "editDialogTitle": "结算方式设置",
+  "width": "700px",
+  "labelWidth": "80px",
+    "formItems": {
+    "form": [
+      {
+        "type": "input",
+        "value": "",
+        "label": "名称",
+        "name": "name",
+        "style": {
+          "width": "50%"
+        }
+      },
+      {
+        "type": "input",
+        "value": "",
+        "label": "结算天数",
+        "name": "accountsDay",
+        "style": {
+          "width": "50%"
+        }
+      },
+      {
+        "type": "switch",
+        "value": "",
+        "label": "是否可预付",
+        "name": "isAdvance",
+        "style": {
+          "width": "50%"
+        }
+      },
+      {
+        "type": "input",
+        "value": "",
+        "label": "备注",
+        "name": "description",
+        "style": {
+          "width": "50%"
+        }
+     }
+    ]
+  }
+}

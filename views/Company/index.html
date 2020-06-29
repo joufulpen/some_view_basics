@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <!-- title为变量 是模块的名字 -->
+  <title>公司管理</title>
+    <script>
+      window.coolLocals={}
+       window.extraJsons = ['dtlTable.json']
+    </script>
+  <script src="/settings.js"></script>
+</head>
+
+<body>
+  <div id="root" v-cloak > 
+       <!--cool-single-view  cool-single-dialog  组件为固定组件 需模板生成-->
+     <cool-master-view ref="masterView" :unique-deploy-key="uniqueDeployKey" :axios-setting="axiosSetting" :dialogs="dialogs" :is-methods="isMethods" @table-row-click="tableRowClick" @table-row-dblclick="tableRowDblclick"  @table-select-change="tableSelectionChange"  @pagination-size-change="paginationSizeChange" @pagination-current-change="paginationCurrentChange" @get-condition="getCondition" @new-construction="customNew" @new-edit="newEdit" @looking="looking" @custom-delete="customDelete"></cool-master-view>
+     <!--弹窗 -->
+     <cool-single-dialog ref="singleDialog" :unique-key="uniqueKey" :visible.sync="dialogVisible" :is-methods="isDialogMethods" @update-form="updateForm" @save-event="saveEvent" :save-btn-disabled="isNew" @back-event="backEvent" :container-style="containerStyle">
+       <template slot="formSlot">
+         <el-row>
+            <el-col :span="12">
+              <div style="padding-left: 20px;">
+                <span>公司LOGO</span><el-button style="margin-left: 12px" size="small" type="primary" @click="imgUpload">上传</el-button>
+              </div>
+              <div v-for="(img,idx) in  imgUploadData" :key="idx" style="border: 1px solid #ccc;font-size:0;background-color: rgb(243,245,247)">
+                <img style="display: inline-block;width:160px;height:160px;" :src="`${url}attachment/thumbnail?id=${img.attachmentID}&width=256&height=256`"/>
+                <div style="display: inline-block;height:92px;vertical-align:top;padding: 68px 0 0 20px">
+                  <el-button type="primary" size="mini" @click="downLoad(img)">下载</el-button>
+                <el-button type="danger" size="mini" @click="deleteEvent(img)">删除</el-button>
+                </div>
+              </div>
+            </el-col>
+            <el-col :span="12">
+              <div style="padding-left: 32px">
+                 <span>公司公章</span><el-button style="margin-left: 12px" size="small" type="primary" @click="sealUpload">上传</el-button>
+              </div>
+              <div v-for="(img,idx) in  sealUploadData" :key="idx"  style="border: 1px solid #ccc;font-size:0;background-color: rgb(243,245,247)">
+                <img style="width:160px;height:160px;" :src="`${url}attachment/thumbnail?id=${img.attachmentID}&width=256&height=256`"/>
+                <div style="display: inline-block;height:92px;vertical-align:top;padding: 68px 0 0 20px">
+                   <el-button type="primary" size="mini" @click="downLoad(img)" >下载</el-button>
+                   <el-button type="danger" size="mini" @click="deleteEvent(img)" >删除</el-button>
+                </div>
+               
+              </div>
+            </el-col>
+          </el-row>
+          <el-tabs  type="border-card" style="margin-top: 15px" @tab-click="handleClick">
+                  <el-tab-pane label="银行账户管理" >
+                    <cool-button-group :buttons="dtlButtons" @button-click="bankBtnEvent"></cool-button-group>
+                    <cool-table-view ref="bankTable" :height="tableHeigh" :data="bankData" :columns="bankColumns" @table-selection-change="dltSelection"></cool-table-view>
+                  </el-tab-pane>
+                  <el-tab-pane label="附件" >
+                    <cool-button-group :buttons="attaButtons" @button-click="attaBtnEvent"></cool-button-group>
+                    <cool-table-view ref="attaTable" :height="tableHeigh" :data="companyUploadData" :columns="attaColumns" @table-selection-change="dltSelection"></cool-table-view>
+                  </el-tab-pane>
+                </el-tabs>
+       </template>
+     </cool-single-dialog>
+     <cool-just-dialog  :title="editDialogTitle" :visible.sync="editDialogVisible" :width="editDialogWidth" @save-event="editTableSaveEvent" @back-event="editTableBackEvent"  @closedialog="editTableBackEvent" :show-save-button="showSaveButton">
+        <template slot="dialogSlot">
+            <div style="border:1px solid #DCDFE6">
+              <cool-form-view ref="editFormItems" :form-items="editFormItems" @update-form='editUpdateForm'  size="mini" :inline="true" label-width="100px">
+              </cool-form-view>
+            </div>       
+        </template>
+      </cool-just-dialog>
+    <!-- 上传组件 -->
+     <!-- 上传组件 -->
+    <cool-upload v-if="uploadDialogVisible" :visible.sync="uploadDialogVisible" :parent-id="parentId" :parent-type="parentType" @upload-success="uploadSuccess"></cool-upload>
+  </div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+{
+  "singleTableData":{
+      "cellStyle": {
+        "height": "30px",
+        "padding": "5px 0"
+        },
+      "data": [],
+      "total": 0,
+      "currentPage": 1,
+      "pageSize": 10,
+      "columns": [{
+          "type": "selection"
+        },
+
+        {
+          "prop": "name",
+          "label": "名称"
+        }
+        ,
+        {
+          "prop": "serviceType",
+          "label": "业务类型"
+        }
+        ,
+        {
+          "prop": "serviceDate",
+          "label": "业务日期"
+        }
+        ,
+        {
+          "prop": "supplier",
+          "label": "业务对象"
+        }
+        ,
+        {
+          "prop": "description",
+          "label": "备注"
+        }
+        ]
+        }
+  
+}

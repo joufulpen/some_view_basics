@@ -1,0 +1,85 @@
+{
+  "singleTableData":{
+      "cellStyle": {
+        "height": "30px",
+        "padding": "5px 0"
+        },
+      "data": [],
+      "total": 0,
+      "currentPage": 1,
+      "pageSize": 10,
+      "columns": [{
+          "type": "selection"
+        },
+        {
+          "prop": "id",
+          "label": "编号"
+        },        
+        {
+          "prop": "name",
+          "label": "名称"
+        }
+        ,
+        {
+          "prop": "buildingName",
+          "label": "建筑名称"
+        }
+        ,
+        {
+          "prop": "buildingLevel",
+          "label": "建筑楼层"
+        }
+        ,
+        {
+          "prop": "apartmentNumber",
+          "label": "房间号"
+        }
+        ,
+        {
+          "prop": "doorWindowMode",
+          "label": "门/窗型号"
+        }
+        ,
+        {
+          "prop": "splitNumber",
+          "label": "分体号"
+        }
+        ,
+        {
+          "prop": "largeCategoryCode",
+          "label": "产品大类"
+        }
+        ,
+        {
+          "prop": "childrenType",
+          "label": "小类"
+        }
+        ,
+        {
+          "prop": "active",
+          "label": "是否可用"
+        }
+        ,
+        {
+          "prop": "pigment",
+          "label": "颜色"
+        }
+        ,
+        {
+          "prop": "specifications",
+          "label": "规格"
+        }
+        ,
+        {
+          "prop": "accountSubject",
+          "label": "会计科目"
+        }
+        ,
+        {
+          "prop": "description",
+          "label": "备注"
+        }
+        ]
+        }
+  
+}

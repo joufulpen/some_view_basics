@@ -1,0 +1,37 @@
+{
+	"queryCondition": {
+        "BusinessTrace": {
+              "value": "",
+              "mode": "不参与",
+              "modeList":[],
+              "dataType": "string",
+              "fieldName": "BusinessTrace",
+              "tableRelationMode": "AND",
+              "tableName":"[BusinessFile]",
+              "name": "业务序号",
+              "form": "input"
+        },
+        "FileCode": {
+              "value": "",
+              "mode": "不参与",
+              "modeList":[],
+              "dataType": "string",
+              "fieldName": "FileCode",
+              "tableRelationMode": "AND",
+              "tableName":"[BusinessFile]",
+              "name": "文件序号",
+              "form": "input"
+        },
+        "FileName": {
+              "value": "",
+              "mode": "不参与",
+              "modeList":[],
+              "dataType": "string",
+              "fieldName": "FileName",
+              "tableRelationMode": "AND",
+              "tableName":"[BusinessFile]",
+              "name": "文件名",
+              "form": "input"
+        }
+  }
+}

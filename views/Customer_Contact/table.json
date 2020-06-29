@@ -1,0 +1,51 @@
+{
+  "singleTableData":{
+      "cellStyle": {
+        "height": "30px",
+        "padding": "5px 0"
+        },
+      "data": [],
+      "total": 0,
+      "currentPage": 1,
+      "pageSize": 10,
+      "columns": [{
+          "type": "selection"
+        },
+        {
+          "prop": "name",
+          "label": "名称"
+        }
+        ,
+        {
+          "prop": "phone",
+          "label": "联系电话"
+        }
+        ,
+        {
+          "prop": "email",
+          "label": "email"
+        }
+        ,
+        {
+          "prop": "fax",
+          "label": "传真"
+        }
+        ,
+        {
+          "prop": "password",
+          "label": "密码"
+        }
+        ,
+        {
+          "prop": "customerCode",
+          "label": "客户序号"
+        }
+        ,
+        {
+          "prop": "description",
+          "label": "备注"
+        }
+        ]
+        }
+  
+}

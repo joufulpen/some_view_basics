@@ -1,0 +1,87 @@
+{
+	"queryCondition": {
+        "Name": {
+              "value": "",
+              "mode": "不参与",
+              "modeList":[],
+              "dataType": "string",
+              "fieldName": "Name",
+              "tableRelationMode": "AND",
+              "tableName":"[Customer_Contact]",
+              "name": "名称",
+              "form": "input"
+        }
+        ,
+        "Phone": {
+              "value": "",
+              "mode": "不参与",
+              "modeList":[],
+              "dataType": "string",
+              "fieldName": "Phone",
+              "tableRelationMode": "AND",
+              "tableName":"[Customer_Contact]",
+              "name": "联系电话",
+              "form": "input"
+        }
+        ,
+        "Email": {
+              "value": "",
+              "mode": "不参与",
+              "modeList":[],
+              "dataType": "string",
+              "fieldName": "Email",
+              "tableRelationMode": "AND",
+              "tableName":"[Customer_Contact]",
+              "name": "email",
+              "form": "input"
+        }
+        ,
+        "Fax": {
+              "value": "",
+              "mode": "不参与",
+              "modeList":[],
+              "dataType": "string",
+              "fieldName": "Fax",
+              "tableRelationMode": "AND",
+              "tableName":"[Customer_Contact]",
+              "name": "传真",
+              "form": "input"
+        }
+        ,
+        "Password": {
+              "value": "",
+              "mode": "不参与",
+              "modeList":[],
+              "dataType": "string",
+              "fieldName": "Password",
+              "tableRelationMode": "AND",
+              "tableName":"[Customer_Contact]",
+              "name": "密码",
+              "form": "input"
+        }
+        ,
+        "CustomerCode": {
+              "value": "",
+              "mode": "不参与",
+              "modeList":[],
+              "dataType": "string",
+              "fieldName": "CustomerCode",
+              "tableRelationMode": "AND",
+              "tableName":"[Customer_Contact]",
+              "name": "客户序号",
+              "form": "input"
+        }
+        ,
+        "Description": {
+              "value": "",
+              "mode": "不参与",
+              "modeList":[],
+              "dataType": "string",
+              "fieldName": "description",
+              "tableRelationMode": "AND",
+              "tableName":"[Customer_Contact]",
+              "name": "备注",
+              "form": "input"
+        }
+  }
+}

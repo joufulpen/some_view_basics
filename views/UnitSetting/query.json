@@ -1,0 +1,39 @@
+{
+	"queryCondition": {
+        "Name": {
+              "value": "",
+              "mode": "相似",
+              "modeList":[],
+              "dataType": "string",
+              "fieldName": "Name",
+              "tableRelationMode": "AND",
+              "tableName":"[UnitSetting]",
+              "name": "名称",
+              "form": "input"
+        }
+        ,
+        "Type": {
+              "value": "",
+              "mode": "不参与",
+              "modeList":[],
+              "dataType": "string",
+              "fieldName": "Type",
+              "tableRelationMode": "AND",
+              "tableName":"[UnitSetting]",
+              "name": "单位类型",
+              "form": "input"
+        }
+        ,
+        "Description": {
+              "value": "",
+              "mode": "不参与",
+              "modeList":[],
+              "dataType": "string",
+              "fieldName": "description",
+              "tableRelationMode": "AND",
+              "tableName":"[UnitSetting]",
+              "name": "备注",
+              "form": "input"
+        }
+  }
+}

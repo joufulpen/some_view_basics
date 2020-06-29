@@ -1,0 +1,128 @@
+{
+	"queryCondition": {
+        "Name": {
+              "value": "",
+              "mode": "相似",
+              "modeList":[],
+              "dataType": "string",
+              "fieldName": "Name",
+              "tableRelationMode": "AND",
+              "tableName":"[Material]",
+              "name": "物料名称",
+              "form": "input"
+        }
+        ,
+        "id": {
+              "value": "",
+              "mode": "相似",
+              "modeList":[],
+              "dataType": "string",
+              "fieldName": "id",
+              "tableRelationMode": "AND",
+              "tableName":"[Material]",
+              "name": "物料编码",
+              "form": "input"
+        }
+        ,
+        "MaterialClass": {
+              "value": "",
+              "mode": "相似",
+              "modeList":[],
+              "prefix":"basic",
+              "options":[],
+              "api":"TypeofMaterial/GetList?condition=[]",
+              "dataType": "string",
+              "fieldName": "MaterialClass",
+              "tableRelationMode": "AND",
+              "tableName":"[Material]",
+              "name": "物料大类",
+              "form": "select"
+        }
+        ,
+        "MaterialSubclass": {
+              "value": "",
+              "mode": "相似",
+              "modeList":[],
+              "options":[],
+              "dataType": "string",
+              "fieldName": "MaterialSubclass",
+              "tableRelationMode": "AND",
+              "tableName":"[Material]",
+              "name": "物料小类",
+              "form": "select"
+        }
+        ,
+        "Version": {
+              "value": "",
+              "mode": "不参与",
+              "modeList":[],
+              "dataType": "string",
+              "fieldName": "Version",
+              "tableRelationMode": "AND",
+              "tableName":"[Material]",
+              "name": "型号",
+              "form": "input"
+        }
+        ,
+        "Specifications": {
+              "value": "",
+              "mode": "不参与",
+              "modeList":[],
+              "dataType": "string",
+              "fieldName": "Specifications",
+              "tableRelationMode": "AND",
+              "tableName":"[Material]",
+              "name": "规格",
+              "form": "input"
+        }
+        ,
+        "Pigment": {
+              "value": "",
+              "mode": "不参与",
+              "modeList":[],
+              "dataType": "string",
+              "fieldName": "Pigment",
+              "tableRelationMode": "AND",
+              "tableName":"[Material]",
+              "name": "颜色",
+              "form": "input"
+        }
+        ,
+        "Unit": {
+              "value": "",
+              "mode": "不参与",
+              "modeList":[],
+              "dataType": "string",
+              "fieldName": "Unit",
+              "tableRelationMode": "AND",
+              "tableName":"[Material]",
+              "name": "单位",
+              "form": "input"
+        }
+        ,
+        "Description": {
+              "value": "",
+              "mode": "不参与",
+              "modeList":[],
+              "dataType": "string",
+              "fieldName": "description",
+              "tableRelationMode": "AND",
+              "tableName":"[Material]",
+              "name": "备注",
+              "form": "input"
+        },
+        "Active": {
+              "value": true,
+              "mode": "等于",
+              "modeList":[],
+              "activeText":"启用",
+              "inactiveText":"禁用",
+              "dataType": "boolean",
+              "fieldName": "active",
+              "tableRelationMode": "AND",
+              "tableName":"[Material]",
+              "name": "状态",
+              "form": "switch"
+        }
+  }
+}

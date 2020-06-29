@@ -1,0 +1,75 @@
+{
+  "hdrTableData":{
+      "cellStyle": {
+        "height": "30px",
+        "padding": "5px 0"
+        },
+      "data": [],
+      "total": 0,
+      "currentPage": 1,
+      "pageSize": 10,
+      "columns": [{
+          "type": "selection"
+        },{
+          "prop": "id",
+          "label": "员工编号"
+        }
+        ,
+        {
+          "prop": "name",
+          "label": "姓名"
+        }
+        ,
+        {
+          "prop": "sex",
+          "label": "性别"
+        }
+        ,
+        {
+          "prop": "nation",
+          "label": "民族"
+        }
+        ,
+        {
+          "prop": "departmentName",
+          "label": "部门"
+        }
+        ,
+        {
+          "prop": "position",
+          "label": "职位"
+        }
+        ,
+        {
+          "prop": "phone",
+          "label": "联系电话"
+        }
+        ,
+        {
+          "prop": "email",
+          "label": "邮箱"
+        }
+        ,
+        {
+          "prop": "idCard",
+          "label": "身份证"
+        }
+        ,
+        {
+          "prop": "hiredate",
+          "label": "入职日期"
+        }
+        ,
+        {
+          "prop": "defaultBankAccountName",
+          "label": "默认银行账户"
+        }
+        ,
+        {
+          "prop": "description",
+          "label": "备注"
+        }
+        ]
+        }
+  
+}

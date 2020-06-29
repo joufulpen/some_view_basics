@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <!-- title为变量 是模块的名字 -->
+  <title>物料资料</title>
+  <style>
+    [v-cloak] {
+        display: none !important;
+      }
+  </style>
+  <script>
+    window.coolLocals={}
+    window.extraJsons = ['dialogForm.json']
+  </script>
+  <script type="post-load" src="../libs/xlsx-populate-no-encryption.min.js"></script>
+  <script src="/settings.js"></script>
+</head>
+
+<body>
+  <div id="root" v-cloak>
+    <!--cool-single-view  cool-single-dialog  组件为固定组件 需模板生成-->
+    <cool-single-view ref="singleView" :unique-deploy-key="uniqueDeployKey" :axios-setting="axiosSetting" :dialogs="dialogs" :show-mode-list="showModeList" :is-methods="isMethods" @table-row-click="tableRowClick" @table-row-dblclick="tableRowDblclick" @table-selection-change="tableSelectionChange" @pagination-size-change="paginationSizeChange" @pagination-current-change="paginationCurrentChange" @get-condition="getCondition" @check="check" @table-selection-change="tableSelectionChange"
+      @store-manage="storeManage" @purchase-manage="purchaseManage" @import-btn="importBtn" @query-btn="queryBtn"  @custom-edit="newEdit" @custom-new="customNew"></cool-single-view>
+    <!-- 新建弹窗 -->
+    <cool-just-dialog  :title="goodsDialogTitle" :visible.sync="dialogVisible"  :width="dialogWidth" @closedialog="newBackEvent" >
+        <template slot="dialogSlot">
+            <div style="border:1px solid #DCDFE6;" >
+              <el-tabs type="border-card" style="padding-bottom: 20px" v-model="activeName">
+                <el-tab-pane label="基础信息" name="first">
+                  <cool-form-view ref="goodsCoolForm" :form-items="goodsFormItems" size="mini" :inline="true" :label-width="purchaseLabelWidth" @update-form="updateForm"></cool-form-view>
+                  <div style="margin:23px 23px">
+                    <el-button type="primary" size="small" @click="addaccessory" :disabled="isCheck">添加附件</el-button>
+                    <el-row :gutter="20" v-if="hasUploadData.length !== 0" v-for="(item,idx) in hasUploadData" :key="idx">
+                      <el-col :span="24" style="border:1px solid #ccc;height:50px;width:670px;margin-top:15px;display: flex;flex-direction:column;">
+                        <div>
+                          <el-row :gutter="25">
+                            <el-col :span="5">
+                              <div style="position: relative;">
+                                <img style="width:46px;height:46px;margin-top:1px;" :src="`${url}attachment/thumbnail?id=${item.attachmentID}&width=256&height=256`" @mouseenter="enter(item.attachmentID)" @mouseleave="leave" />
+                                <img v-show="item.attachmentID == currentID" style="width:260px;height:260px; position: absolute;left:56px;top:-102px;z-index: 666666666;" :src="`${url}attachment/thumbnail?id=${item.attachmentID}&width=256&height=256`" />
+                              </div>
+                            </el-col>
+                            <el-col :span="12">
+                              <div style="line-height: 48px;text-align: center;">{{item.name}}</div>
+                            </el-col>
+                            <el-col :span="7" style="margin-top:10px;">
+                            <el-button type="primary" size="mini" @click="downLoad(item)" :disabled="isCheck">下载</el-button>
+                            <el-button type="danger" size="mini" @click="deleteEvent(item)" :disabled="isCheck">删除</el-button>
+                          </el-col>
+                          </el-row>
+                        </div>
+                      </el-col>
+                    </el-row>
+                    <div></div>
+                  </div>
+                  <el-row>
+                    <el-col :span="24" style="padding:15px 20px 0 0;">
+                      <el-button type="primary" @click="saveEvent" style="float:right;" :disabled="allowGoodsNew">提交</el-button>
+                    </el-col>
+                  </el-row>
+                </el-tab-pane>
+                <el-tab-pane label="库存属性" name="second">
+                  <cool-form-view ref="storeCoolForm" :form-items="storeFormItems" size="mini" :inline="true" :label-width="purchaseLabelWidth" @update-form="storeUpdateForm"></cool-form-view>
+                  <el-row>
+                    <el-col :span="24" style="padding:15px 20px 0 0;">
+                      <el-button type="primary" @click="storeSaveEvent" style="float:right;" :disabled="allowNew">提交</el-button>
+                    </el-col>
+                  </el-row>
+                </el-tab-pane>
+                <el-tab-pane label="采购属性" name="third" > 
+                  <cool-form-view ref="purchaseCoolForm" :form-items="purchaseFormItems" size="mini" :inline="true" :label-width="purchaseLabelWidth" @update-form="purchaseUpdateForm"></cool-form-view>
+                  <el-row>
+                    <el-col :span="24" style="padding:15px 20px 0 0;">
+                      <el-button type="primary" @click="purchaseSaveEvent" style="float:right;" :disabled="allowNew">提交</el-button>
+                    </el-col>
+                  </el-row>
+                </el-tab-pane>
+              </el-tabs>
+            </div>       
+        </template>
+      </cool-just-dialog>
+
+    <!-- 上传组件 -->
+    <cool-upload v-if="uploadDialogVisible" :visible.sync="uploadDialogVisible" :parent-id="parentId" :parent-type="parentType" @upload-success="uploadSuccess"></cool-upload>
+    <!-- 库存属性管理弹窗 -->
+ <!--    <el-dialog ref="storeManage" title="物料库存信息管理" :visible.sync="storeDialogVisible" :close-on-click-modal="false" width="850px" @close="storeBackEvent">
+      <div style="border:1px solid #DCDFE6">
+        <div style="margin-bottom:15px" v-for="item in storeFormItems" :key="item.index">
+          <span style="font-size:16px;vertical-align: middle;font-weight:bold">{{item.title}}</span>
+          <cool-form-view ref="storeCoolForm" :form-items="item.formItems" size="mini" :inline="true" :label-width="storeLabelWidth" @update-form="storeUpdateForm"></cool-form-view>
+        </div>
+      </div>
+      <el-button size="mini" @click="storeBackEvent" style="border-top: none">返 回</el-button>
+      <el-button size="mini" @click="storeSaveEvent" style="float:right;border-top: none">保 存</el-button>
+    </el-dialog> -->
+    <!-- 采购属性管理弹窗 -->
+<!--     <el-dialog ref="purchaseManage" title="物料采购信息管理" :visible.sync="purchaseDialogVisible" :close-on-click-modal="false" width="750px" @close="purchaseBackEvent">
+      <div style="border:1px solid #DCDFE6">
+        <div style="margin-bottom:15px" v-for="item in purchaseFormItems" :key="item.index">
+          <span style="font-size:16px;vertical-align: middle;font-weight:bold">{{item.title}}</span>
+          <cool-form-view ref="purchaseCoolForm" :form-items="item.formItems" size="mini" :inline="true" :label-width="purchaseLabelWidth" @update-form="purchaseUpdateForm"></cool-form-view>
+        </div>
+      </div>
+      <el-button size="mini" @click="purchaseBackEvent" style="border-top: none">返 回</el-button>
+      <el-button size="mini" @click="purchaseSaveEvent" style="float:right;border-top: none">保 存</el-button>
+    </el-dialog>
+ -->
+    <!-- 导入 -->
+    <el-dialog title="导入" :visible="importVisible" :close-on-click-modal="false" @close="importDialogClose" width="440px" v-loading="dialogLoading">
+      <el-row v-if="importVisible">
+        <el-col :span="16">
+          <el-card shadow="never" style="height: 100px;width:250px;">
+            <el-upload ref="upload" action="" :auto-upload="false" :multiple="false" :limit="2" :on-change="handleChange" :on-remove="handleRemove" :file-list="uploadlist">
+              <el-button size="mini" type="primary">选择文件</el-button>
+            </el-upload>
+          </el-card>
+        </el-col>
+        <el-col :span="8" style="text-align:center">
+          <el-button :disabled="uploadlist.length == 0" @click="btnImport_click" type="success" size="medium" style="margin:20px">导入</el-button>
+        </el-col>
+      </el-row>
+    </el-dialog>
+  </div>
+</body>
+
+</html>

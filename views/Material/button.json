@@ -1,0 +1,42 @@
+{
+  "buttons":[{
+        "text": "查询",
+        "size": "mini",
+        "icon": "#iconchaxun",
+        "disabled": false,
+        "controlDisable":"",
+        "key": "query-btn"
+      },{
+        "text": "查看",
+        "size": "mini",
+        "icon": "#iconchakan",
+        "disabled": true,
+        "controlDisable":"single",
+        "key": "check"
+      },
+      {
+        "text": "新建",
+        "size": "mini",
+        "icon": "#iconxinzeng",
+        "disabled": false,
+        "controlDisable":"",
+        "key": "custom-new"
+      },
+      {
+        "text": "导入",
+        "size": "mini",
+        "icon": "#icondaoruwenjian",
+        "disabled": true,
+        "controlDisable":"",
+        "key": "import-btn"
+      },
+      {
+        "text": "编辑",
+        "size": "mini",
+        "icon": "#iconERP_bianji",
+        "disabled": true,
+        "controlDisable":"single",
+        "key": "custom-edit"
+      }
+      ]
+}

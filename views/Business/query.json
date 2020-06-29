@@ -1,0 +1,63 @@
+{
+	"queryCondition": {
+        "Name": {
+              "value": "",
+              "mode": "不参与",
+              "modeList":[],
+              "dataType": "string",
+              "fieldName": "Name",
+              "tableRelationMode": "AND",
+              "tableName":"[Business]",
+              "name": "名称",
+              "form": "input"
+        }
+        ,
+        "ServiceType": {
+              "value": "",
+              "mode": "不参与",
+              "modeList":[],
+              "dataType": "string",
+              "fieldName": "ServiceType",
+              "tableRelationMode": "AND",
+              "tableName":"[Business]",
+              "name": "业务类型",
+              "form": "input"
+        }
+        ,
+        "ServiceDate": {
+              "value": "",
+              "mode": "不参与",
+              "modeList":[],
+              "dataType": "string",
+              "fieldName": "ServiceDate",
+              "tableRelationMode": "AND",
+              "tableName":"[Business]",
+              "name": "业务日期",
+              "form": "input"
+        }
+        ,
+        "Supplier": {
+              "value": "",
+              "mode": "不参与",
+              "modeList":[],
+              "dataType": "string",
+              "fieldName": "Supplier",
+              "tableRelationMode": "AND",
+              "tableName":"[Business]",
+              "name": "业务对象",
+              "form": "input"
+        }
+        ,
+        "Description": {
+              "value": "",
+              "mode": "不参与",
+              "modeList":[],
+              "dataType": "string",
+              "fieldName": "description",
+              "tableRelationMode": "AND",
+              "tableName":"[Business]",
+              "name": "备注",
+              "form": "input"
+        }
+  }
+}

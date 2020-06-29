@@ -1,0 +1,51 @@
+{
+  "singleTableData":{
+      "cellStyle": {
+        "height": "30px",
+        "padding": "5px 0"
+        },
+      "data": [],
+      "total": 0,
+      "currentPage": 1,
+      "pageSize": 10,
+      "columns": [{
+          "type": "selection"
+        },
+        {
+          "prop": "name",
+          "label": "名称"
+        }
+        ,
+        {
+          "prop": "account",
+          "label": "银行账号"
+        }
+        ,
+        {
+          "prop": "accountName",
+          "label": "开户名"
+        }
+        ,
+        {
+          "prop": "address",
+          "label": "银行地址"
+        }
+        ,
+        {
+          "prop": "phone",
+          "label": "联系电话"
+        }
+        ,
+        {
+          "prop": "companyID",
+          "label": "公司"
+        }
+        ,
+        {
+          "prop": "description",
+          "label": "备注"
+        }
+        ]
+        }
+  
+}

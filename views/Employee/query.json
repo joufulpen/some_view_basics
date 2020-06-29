@@ -1,0 +1,93 @@
+{
+	"queryCondition": {
+        "Name": {
+              "value": "",
+              "mode": "相似",
+              "modeList":[],
+              "dataType": "string",
+              "fieldName": "Name",
+              "tableRelationMode": "AND",
+              "tableName":"[Employee]",
+              "name": "名称",
+              "form": "input"
+        }
+        ,
+        "DepartmentID": {
+              "value": "",
+              "mode": "不参与",
+              "modeList":[],
+              "api":"Department/GetList?condition=[]",
+              "prefix":"basic",
+              "options":[],
+              "dataType": "string",
+              "fieldName": "DepartmentID",
+              "tableRelationMode": "AND",
+              "tableName":"[Employee]",
+              "name": "部门",
+              "form": "select"
+        }
+        ,
+        "Sex": {
+              "value": "",
+              "mode": "不参与",
+              "modeList":[],
+              "prefix":"basic",
+              "api":"BaseProperty/GetList?condition=[%7B%22FieldName%22:%22Type%22,%22TableName%22:%22[BaseProperty]%22,%22Value%22:[%7B%22value%22:%22%E6%80%A7%E5%88%AB%22%7D],%22TableRelationMode%22:%22AND%22,%22Mode%22:%22%E7%AD%89%E4%BA%8E%22,%22DataType%22:%22string%22%7D]",
+              "options":[],
+              "dataType": "string",
+              "fieldName": "Sex",
+              "tableRelationMode": "AND",
+              "tableName":"[Employee]",
+              "name": "性别",
+              "form": "select"
+        }
+        ,
+        "Phone": {
+              "value": "",
+              "mode": "不参与",
+              "modeList":[],
+              "dataType": "string",
+              "fieldName": "Phone",
+              "tableRelationMode": "AND",
+              "tableName":"[Employee]",
+              "name": "联系电话",
+              "form": "input"
+        }
+        ,
+        "Email": {
+              "value": "",
+              "mode": "不参与",
+              "modeList":[],
+              "dataType": "string",
+              "fieldName": "Email",
+              "tableRelationMode": "AND",
+              "tableName":"[Employee]",
+              "name": "邮箱",
+              "form": "input"
+        }
+        ,
+        "Address": {
+              "value": "",
+              "mode": "不参与",
+              "modeList":[],
+              "dataType": "string",
+              "fieldName": "Address",
+              "tableRelationMode": "AND",
+              "tableName":"[Employee]",
+              "name": "地址",
+              "form": "input"
+        }
+        ,
+        "Description": {
+              "value": "",
+              "mode": "不参与",
+              "modeList":[],
+              "dataType": "string",
+              "fieldName": "description",
+              "tableRelationMode": "AND",
+              "tableName":"[Employee]",
+              "name": "备注",
+              "form": "input"
+        }
+  }
+}

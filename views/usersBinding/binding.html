@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>用户角色绑定</title>
+  <style>
+    [v-cloak] {
+      display: none !important;
+    }
+  </style>
+  <script src="/settings.js"></script>
+</head>
+
+<body>
+  <div id="root" v-cloak>
+    <el-button type="warning" size="small" style="margin:5px" :disabled="!currentRow" @click="dialogShow">密码修改</el-button>
+    <el-table ref="table" class="authority" :data="dataList" highlight-current-row style="width: 100%" @row-click="rowClick">
+      <el-table-column type="index" label="序号"></el-table-column>
+      <el-table-column prop="name" label="用户名"></el-table-column>
+      <el-table-column prop="email" label="邮箱"></el-table-column>
+      <el-table-column prop="phone" label="手机号码"></el-table-column>
+      <el-table-column label="角色配置">
+        <template slot-scope="{row}">
+          <el-select v-model="row.roleID" placeholder="请选择" @change="handleRoleChange(row)">
+            <el-option v-for="item in options" :key="item.index" :label="item.label" :value="item.value">
+            </el-option>
+          </el-select>
+        </template>
+      </el-table-column>
+    </el-table>
+
+    <cool-just-dialog title="密码修改" show-save-button :visible.sync="dialogVisible" :collapsed.sync="collapsed" :fullscreen.sync="fullscreen" width="400px" @closedialog="dialogClose" @save-event="resetPassword" @back-event="dialogClose">
+      <div slot="dialogSlot">
+        <cool-form-view ref="formItems" :form-items="formItems" size="small" :inline="true" label-width="auto" @update-form="updateForm"></cool-form-view>
+      </div>
+    </cool-just-dialog>
+  </div>
+</body>
+
+</html>

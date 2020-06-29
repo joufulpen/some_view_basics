@@ -1,0 +1,124 @@
+{
+  "apiName":"basic",
+  "editDialogTitle": "公司管理",
+  "width": "700px",
+  "labelWidth": "100px",
+    "formItems": {
+    "form": [
+      {
+        "type": "input",
+        "value": "",
+        "label": "公司名称",
+        "name": "name",
+        "style": {
+          "width": "50%"
+        },
+        "rules": {
+          "required": true,
+          "message": "公司名称不能为空",
+          "trigger": "blur"
+        }
+      },
+      {
+        "type": "input",
+        "value": "",
+        "label": "英文名称",
+        "name": "enName",
+        "style": {
+          "width": "50%"
+        }
+      },
+      {
+        "type": "input",
+        "value": "",
+        "label": "英文简称",
+        "name": "enNameShort",
+        "style": {
+          "width": "50%"
+        }
+      },
+      {
+        "type": "input",
+        "value": "",
+        "label": "联系电话",
+        "name": "phone",
+        "style": {
+          "width": "50%"
+        }
+      },
+      {
+        "type": "input",
+        "value": "",
+        "label": "公司传真",
+        "name": "fax",
+        "style": {
+          "width": "50%"
+        }
+      },
+      {
+        "type": "select",
+        "options":[],
+        "value": "",
+        "label": "默认银行账户",
+        "name": "defaultBankAccountID",
+        "style": {
+          "width": "50%"
+        }
+      }, 
+      {
+        "type": "textarea",
+        "value": "",
+        "label": "备注",
+        "name": "description",
+        "inputStyle":{
+          "width":"523px"
+        },
+        "style": {
+          "width": "100%"
+        }
+     }
+    ]
+  },
+  "bankFormItems":{
+    "form":[{
+        "type": "input",
+        "value": "",
+        "label": "银行账户",
+        "name": "name",
+        "style": {
+          "width": "100%"
+        }
+      },{
+        "type": "input",
+        "value": "",
+        "label": "开户行",
+        "name": "bankName",
+        "style": {
+          "width": "100%"
+        }
+      },{
+        "type": "input",
+        "value": "",
+        "label": "银行地址",
+        "name": "address",
+        "style": {
+          "width": "100%"
+        }
+      },{
+        "type": "radio",
+        "radioItems":[{
+          "label":"对公业务",
+          "value":"对公业务"
+        },{
+          "label":"对私业务",
+          "value":"对私业务"
+        }],
+        "value": "对公业务",
+        "label": "业务类型",
+        "name": "type",
+        "style": {
+          "width": "100%"
+        }
+      }]
+  }
+}
